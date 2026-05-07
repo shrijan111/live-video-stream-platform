@@ -1,15 +1,8 @@
-version: "3.8"
-
 services:
   web:
     build:
       context: .
       args:
-        TMDB_V3_API_KEY: 8578775e496b9822f0bebca7b36e4f61
-
-    container_name: video1
-
+        TMDB_V3_API_KEY: ${TMDB_V3_API_KEY}
     ports:
       - "80:80"
-
-    restart: always
